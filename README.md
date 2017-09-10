@@ -29,3 +29,5 @@ for i in threads{
 	write plot data
 }
 ```
+
+run CpuWatcher.py -h for helps
