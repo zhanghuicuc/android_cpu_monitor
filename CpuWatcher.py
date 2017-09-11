@@ -60,10 +60,10 @@ class Cpudata:
         self.percents.append(self.core1_percent)
         self.percents.append(self.core2_percent)
         self.percents.append(self.core3_percent)
-        self.proc_utime_old = 0
-        self.proc_stime_old = 0
-        self.proc_utime_new = 0
-        self.proc_stime_new = 0
+        self.proc_utime_old = -1
+        self.proc_stime_old = -1
+        self.proc_utime_new = -1
+        self.proc_stime_new = -1
         self.proc_time_delta = 0
         self.cpu_times_old = []
         self.cpu_times_new = []
@@ -185,7 +185,7 @@ def cal_percent(options, pid, thread, cputimes):
     datas = result.split(' ')
     thread.setName(datas[1])
     which_cpu = (int)(datas[38])
-    if thread.getCpudata().getProcUtimeOld() == 0 or thread.getCpudata().getProcStimeOld() == 0:
+    if thread.getCpudata().getProcUtimeOld() == -1 or thread.getCpudata().getProcStimeOld() == -1:
         thread.getCpudata().setProcUtimeOld((int)(datas[13]))
         thread.getCpudata().setProcStimeOld((int)(datas[14]))
         thread.getCpudata().setCpuTimesOld(cputimes)
