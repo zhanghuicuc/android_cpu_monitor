@@ -1,6 +1,8 @@
 # android_cpu_monitor
 calculate cpu usage percentage on each core of a process's threads
 
+Android cpu占用率监视器，精细到每个线程、每个核
+
 # Author:
 zhang hui <zhanghui9@le.com;zhanghuicuc@gmail.com>
 LeEco BSP Multimedia / Communication University of China
@@ -31,3 +33,7 @@ for i in threads{
 ```
 
 run CpuWatcher.py -h for helps
+
+欢迎关注我的公众号灰度五十，分享各类音视频、移动开发知识，以及名企内推信息~
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20181222184847599.jpg)
